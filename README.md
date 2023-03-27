@@ -1,2 +1,3 @@
 # Strona
 IDK
+Maksymilian Dynus
