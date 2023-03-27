@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  li:nth-child(1){
+    background-color: green;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 1fr 100px 1fr 100px;
+    grid-template-areas:
+    ". BigNews BigNews . FSmallNew ."
+    ". BigNews BigNews . FSmallNew ."
+    ". MediumNew MediumNew . SSmallNew .";
+  }
+
+  .BigNews {
+    grid-area: BigNews;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+  }
+
+  .MNews {
+    grid-area: MediumNew;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+  }
+
+  .FReklama {
+    grid-area: FSmallNew;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+  }
+
+  .SReklama {
+    grid-area: SSmallNew;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+  }
+
+  h2 {
+    background-color:darksalmon;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
