@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +21,7 @@ ul {
   li {
     float: left;
   }
-  
+
   li a {
     display: block;
     color: white;
@@ -29,49 +30,37 @@ ul {
     text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+
+  .abc {
+    display: flex;
+    justify-content: space-around;
+  }
   
-  /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
-  }
-
-  li:nth-child(1){
-    background-color: green;
+    transition: 1s;
   }
 
   main {
-    display: grid;
-    grid-template-columns: 100px 1fr 2fr 100px 1fr 100px;
-    grid-template-rows: 100px 1fr 1fr 100px 1fr 100px;
-    grid-template-areas:
-    ". BigNews BigNews . FSmallNew ."
-    ". BigNews BigNews . FSmallNew ."
-    ". MediumNew MediumNew . SSmallNew .";
+    width: 40%;
   }
 
-  .BigNews {
-    grid-area: BigNews;
-    width: 100%;
-    height: 100%;
-    background-color: burlywood;
+  aside {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 50%;
   }
 
-  .MNews {
-    grid-area: MediumNew;
-    width: 100%;
-    height: 100%;
-    background-color: burlywood;
+  .news {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
-  .FReklama {
-    grid-area: FSmallNew;
-    width: 100%;
-    height: 100%;
-    background-color: burlywood;
-  }
-
-  .SReklama {
-    grid-area: SSmallNew;
+  .NewsContent {
     width: 100%;
     height: 100%;
     background-color: burlywood;
@@ -87,4 +76,22 @@ ul {
 
   h4 {
     text-align: center;
+  }
+
+  .chelby {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+  }
+
+  .chelby > img {
+    width: 20%;
+    height: 20%;
+    transition: 1s;
+  }
+
+  .chelby > img:hover {
+    width: 25%;
+    height: 25%;
   }
