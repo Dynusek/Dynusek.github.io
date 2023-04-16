@@ -59,7 +59,7 @@ function StartGame() {
 }
 
 function Prank() {
-  for (let i = 0; i <= 20000; i++) {
+  for (let i = 0; i <= 1000; i++) {
     window
       .open("https://www.youtube.com/watch?v=uHgt8giw1LY", "_blank")
       .focus();
