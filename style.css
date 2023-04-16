@@ -1,145 +1,366 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --v1: calc(max(9vw, 11vh));
 }
 
-body {
-    background-color: antiquewhite;
+body{
+    background: black;
+    overflow-x: hidden;
+}
+.row{
+    display: inline-flex;
+    margin-top: calc(var(--v1) * -0.32);;
+    margin-left: calc(var(--v1) * -0.5);;
+}
+button.hexagon{
+    border: none;
+    cursor: pointer;
+    z-index: 1;
 }
 
-header {
-  margin-bottom: 10px;
+.allHexes {
+  z-index: -1;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+.hexagon{
+    z-index: -1;
+    position: relative;
+    width: var(--v1);
+    height: calc(var(--v1) * 1.1);
+    margin: calc(var(--v1) * 0.04) calc(var(--v1) * 0.02);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(90deg, rgba(25, 25, 25, 0.7) 50%, rgba(10,10,10,0.85) 50%);
+    background: rgba(15, 15, 15, 1);
+    text-align: center;
+    color: rgba(15, 15, 15, 1);
+    line-height: calc(var(--v1) * 1.1);
+    font-size: 2vw;
+    transition: 1s;
+    overflow: hidden;
+}
+.row:nth-child(even){
+    margin-left: calc(var(--v1) * 0.02);
+}
+.curser{
+    z-index: -1;
+    position: fixed;
+    width: calc(var(--v1) * 2.5);
+    height: calc(var(--v1) * 2.5);
+    border-radius: 50%;
+    animation: anim 2s linear infinite;
+    visibility: hidden;
+    transition: .1s;
+    transform: translate(-50%, -50%);
+}
+@keyframes anim{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes fireanim {
+  0% {
+    filter: hue-rotate(0deg);
+    background: linear-gradient(180deg,  rgb(149, 228, 22) 0%, rgb(213, 24, 24)100%);
+  }
+  50% {
+    filter: hue-rotate(40deg);
+    background: linear-gradient(180deg,  rgb(149, 228, 22) 0%, rgb(213, 24, 24)100%);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+    background: linear-gradient(180deg,  rgb(149, 228, 22) 0%, rgb(213, 24, 24)100%);
+  }
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+body:hover .curser{
+    background: radial-gradient(circle, rgba(0,255,0,1) 0%, rgba(0,255,0,0) 70%);
+    visibility: visible;
 }
 
 ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #333;
+    background-color: #332F2E;
+    width: 100%;
+    z-index: 1;
   }
-  
   li {
     float: left;
   }
-
-  li:nth-last-child(1) {
-    float: right;
-  }
-
-  li a {
+  
+  li a{
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-
-  .abc {
-    display: flex;
-    justify-content: space-around;
+    background-color: transparent;
+    transition: .5s;
+    width: 100%;
   }
   
   li a:hover {
-    background-color: #111;
-    transition: 1s;
+    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(0,255,0,0) 100%);
+    animation: anim 2s linear infinite;
+  }
+
+  #LogSign {
+    float: right;
   }
 
   main {
-    width: 40%;
+    padding: 4vw;
+    position: relative;
   }
-
-  aside {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 30%;
-    height: 50%;
-  }
-
-  .news {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-
-  .NewsContent {
-    width: 100%;
-    height: 100%;
-    background-color: burlywood;
-  }
-
-  h2 {
-    background-color:darksalmon;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  h4 {
-    text-align: center;
-  }
-
-  .chelby {
+  main .chairs {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-around;
+    gap: 1vw;
+    justify-content: space-between;
   }
 
-  .chelby > img {
-    width: 20%;
-    height: 20%;
+  main .chairs article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 1vw;
+    height: 35vw;
+    width: 20vw;
+    justify-content: center;
+    background-color: white;
+    border-color: black;
+    border-radius: 10%;
+    border-width: 5vw;
+  }
+
+  main .chairs article img {
+    height: 30vw;
+    width: 20vw;
+    overflow: hidden;
+    background-color: transparent;
     transition: 1s;
   }
 
-  .chelby > img:hover {
-    width: 1000%;
-    height: 1000%;
+  main .chairs article button {
+    cursor: pointer;
+    height: 3vw;
+    width: 7vw;
+    border-radius: 1vw;
+    border: none;
+    background: linear-gradient(90deg, rgba(16,129,31,1) 0%, rgba(25,224,17,1) 100%);
+    animation: anim 2s linear infinite;
+    transition: 1s;
   }
 
-  .container {
-    position: absolute;
+  main .chairs article button:hover {
+    cursor: pointer;
+    height: 3vw;
+    width: 7vw;
+    scale: 104%;
+    border-radius: 1vw;
+    border: none;
+  }
+
+  h2 {
+    color: #000;
+  }
+
+  .notItersecting {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  .Itersecting {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+  .articleinfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    row-gap: 5vw;
+  }
+
+  .article {
+    background-color: white;
+    border-radius: 10%;
+    border-color: #332F2E;
+    border-style: solid;
+    border-width: 1vw;
+    width: 40%;
+    height: 10vw;
+  }
+
+  .article h2 {
+    transform: translateX(40%);
+    width: 100%;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15vw;
+  }
+
+  section .textContent {
+    width: 100%;
+  }
+
+  section h2 {
+    width: 100%;
+    color: white;
+  }
+
+  section p {
+    width: 100%;
+    color: white;
+    font-weight: 900;
+  }
+
+  .loginBox {
+    width: 20vw;
+    height: 30vw;
+    position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: wheat;
-    width: 300px;
-    height: 600px;
+    transform: translate(-50%,-50%);
+    border-radius: 10%;
+    border-width: 0.1vw;
+    border-color: #000;
+    border-style: solid;
+    animation: fireanim 2s linear infinite;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  .container div {
-    width: 100%;
-    height: 50%;
-    display: flex;
-  }
-
-  .container div form {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
     justify-content: center;
+  }
+
+  .switch {
+    width: 100%;
+    height: 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  .switch button {
+    margin-top: 1vw;
+    width: 50%;
+    height: 70%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: #000;
+    color: white;
     align-items: center;
-    row-gap: 1em;
   }
 
-
-  .container div form button {
+  .login {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    visibility: visible;
     width: 100%;
-    height: 15%;
-    border: none;
-    background-color:green;
-    border-radius: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .container div form input {
+  .login form img {
+    scale: 10%;
+  }
+
+  .login form input {
     width: 100%;
-    border: none;
-    background-color:cornsilk;
+    height: 10%;
+  }
+
+  .register {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .register form input {
+    width: 100%;
+    height: 10%;
+  }
+
+  .loginVia {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .loginVia button {
+    width: 19.89vw;
+    height: 10%;
+  }
+
+  #viaGoogle {
+    background: red;
+  }
+
+  #viaFaceBook {
+    background: blue;
+  }
+
+  #viaSnapchat {
+    background: yellow;
+  }
+
+  #viaNintendo {
+    background: grey;
+  }
+
+  button.hexagon{
+    background: rgba(27, 27, 27, 0.6);
+  }
+  button.hexagon:hover{
+      color: rgba(25, 25, 25, 1);
+      background: rgba(185, 185, 185, 0.6);
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer p {
+    color: white;
   }

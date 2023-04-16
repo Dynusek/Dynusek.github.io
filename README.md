@@ -1,3 +1,0 @@
-# Strona
-Maksymilian Dynus
-link: 

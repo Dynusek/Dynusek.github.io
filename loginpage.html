@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <style>
+      ul li:nth-child(4) {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 255, 0, 1) 0%,
+          rgba(0, 255, 0, 0) 100%
+        );
+        animation: anim 2s linear infinite;
+      }
+      footer {
+        position: absolute;
+        top: 99%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul class="navItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chairs.html">Chairs</a></li>
+          <li><a href="info.html">Info</a></li>
+          <li id="LogSign"><a href="loginpage.html">Log/Sign</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div class="loginBox">
+          <div class="switch">
+            <button id="loginButton">login</button>
+          </div>
+          <div class="login">
+            <form action="" method="post">
+              <input type="email" name="" id="" placeholder="email" />
+              <input type="password" name="" id="" placeholder="password" />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="double-authenticathor-code"
+              />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+
+          <div class="register">
+            <form action="" method="post">
+              <input type="email" name="" id="" placeholder="email" />
+              <input type="password" name="" id="" placeholder="password" />
+              <input type="password" name="" id="" placeholder="re-password" />
+              <input type="submit" value="Register" />
+            </form>
+          </div>
+
+          <div class="loginVia">
+            <button id="viaGoogle">Google</button>
+            <button id="viaFaceBook">FaceBook</button>
+            <button id="viaSnapchat">Snapchat</button>
+            <button id="viaNintendo">Nintendo</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>Maksymilian Dynus &copy;</p>
+      </footer>
+
+      <div class="curser"></div>
+      <div class="allHexes">
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <button class="hexagon specialhexGame" onclick="StartGame()">Play</button>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <button class="hexagon specialhexInf" onclick="Prank()">Secret</button>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+        <div class="row">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
