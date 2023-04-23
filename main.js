@@ -6,7 +6,6 @@ const loginButton = document.querySelector("#loginButton");
 const specialHexGame = document.querySelector(".specialhexGame");
 const specialhexInf = document.querySelector(".specialhexInf");
 const allHexes = document.querySelectorAll(".hexagon");
-console.log(StartGame);
 let logSign = 1;
 document.addEventListener("mousemove", function (e) {
   let X = e.clientX;

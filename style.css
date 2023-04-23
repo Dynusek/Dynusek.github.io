@@ -115,8 +115,7 @@ ul {
   }
   
   li a:hover {
-    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(0,255,0,0) 100%);
-    animation: anim 2s linear infinite;
+    background: #15191A;
   }
 
   #LogSign {
@@ -247,8 +246,8 @@ ul {
     border-radius: 10%;
     border-width: 0.1vw;
     border-color: #000;
+    background-color: #273233;
     border-style: solid;
-    animation: fireanim 2s linear infinite;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -270,7 +269,7 @@ ul {
     display: flex;
     justify-content: center;
     border: none;
-    background: #000;
+    background: #15191A;
     color: white;
     align-items: center;
   }
