@@ -1,7 +1,7 @@
 //plansza
 let tileSize = 32;
-let rows = Math.floor(screen.height/tileSize)-4;
-let columns = Math.floor(screen.width/tileSize)-1;
+let rows = 15;
+let columns = 15;
 
 let board;
 let boardWidth = tileSize * columns; // 32 * 16
